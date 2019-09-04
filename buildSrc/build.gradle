@@ -1,0 +1,35 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    //gradle sdk
+    implementation gradleApi()
+    //groovy sdk
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.5.0'
+    implementation 'commons-io:commons-io:2.4'
+}
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+}
+
+group = 'com.pig.plugin'
+
+version = '1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('/Library/Android/localMavenCentre'))
+//            pom.project {
+//                groupId group
+//                artifactId 'ASMTest'
+//                version version
+//            }
+        }
+
+    }
+}
