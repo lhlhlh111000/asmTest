@@ -89,7 +89,7 @@ public class ASMTransform extends Transform {
         if(!f.isDirectory()) {
             String name = f.getName();
             System.out.println(name);
-            if (name.endsWith(".class") && "MainActivity.class".equals(name)) {
+            if (name.endsWith(".class") && f.getAbsolutePath().contains("com/pig/android/asm") && (!f.getAbsolutePath().contains("R$"))) {
                 try {
                     ClassReader classReader = new ClassReader(FileUtils.readFileToByteArray(f));
                     ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);

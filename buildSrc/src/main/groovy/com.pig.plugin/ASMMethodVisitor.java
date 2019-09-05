@@ -13,8 +13,6 @@ public class ASMMethodVisitor extends MethodVisitor {
     public void visitCode() {
         super.visitCode();
         System.out.println("hello from onCreate visitCode");
-
-
     }
 
     @Override
