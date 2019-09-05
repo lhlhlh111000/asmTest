@@ -15,7 +15,7 @@ public class ClickMethodVisitor extends MethodVisitor {
             System.out.println("找到click方法");
             mv.visitVarInsn(Opcodes.ALOAD, 1);
             mv.visitMethodInsn(Opcodes.INVOKESTATIC,
-                    "com/pig/android/asm/Tracker",
+                    "com/pig/android/asm/Tracker2",
                     "click",
                     "(Landroid/view/View;)V",
                     false);

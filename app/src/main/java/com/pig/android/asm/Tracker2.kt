@@ -7,8 +7,9 @@ class Tracker2 {
 
     companion object {
 
+        @JvmStatic
         fun click(view: View) {
-            Toast.makeText(view.context, "点击事件被记录了", Toast.LENGTH_SHORT).show()
+            Toast.makeText(view.context, "点击事件被记录了 by kotlin", Toast.LENGTH_SHORT).show()
         }
     }
 }
