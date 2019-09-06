@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
 
         btn.setOnClickListener {
-            Tracker2.click(it)
+//            Tracker2.click(it)
         }
     }
 }
